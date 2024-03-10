@@ -32,6 +32,7 @@ const Candidates = () => {
       router.push(`../results/${Slug}`);
     }
     setData(response);
+    console.log(response);
     setLoader(true);
   };
 

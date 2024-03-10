@@ -5,6 +5,7 @@ const Results = () => {
   const router = useRouter();
   const [data, setData] = useState(false);
   const [loader, setLoader] = useState(false);
+  const [state, setState] = useState(0);
   const { Slug } = router.query;
 
   const loadResults = async () => {
@@ -28,7 +29,6 @@ const Results = () => {
       console.error("Error fetching results:", error);
     }
   };
-
   useEffect(() => {
     if (Slug) {
       loadResults();
