@@ -26,6 +26,7 @@ export default function Signup({ resetKey, setProgress }) {
     setProgress(50);
     if (email == "" || password == "" || username == "") {
       toast.error("Please fill all the fields");
+      setProgress(100);
       return;
     }
     let userData = { username, email, password };
@@ -44,7 +45,7 @@ export default function Signup({ resetKey, setProgress }) {
       router.push("/ongoing");
       resetKey();
     } else {
-      setProgress(0);
+      setProgress(100);
       toast.error("user already exist");
     }
   };
