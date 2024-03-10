@@ -23,6 +23,7 @@ export default function Signup({ resetKey, setProgress }) {
     }
   };
   const onsubmit = async () => {
+    setProgress(50);
     if (email == "" || password == "" || username == "") {
       toast.error("Please fill all the fields");
       return;
@@ -39,11 +40,11 @@ export default function Signup({ resetKey, setProgress }) {
 
     if (response.success) {
       localStorage.setItem("token", response.token);
-      setProgress(50);
       setProgress(100);
       router.push("/ongoing");
       resetKey();
     } else {
+      setProgress(0);
       toast.error("user already exist");
     }
   };
