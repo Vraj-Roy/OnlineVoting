@@ -85,13 +85,10 @@ const Candidates = () => {
                           src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                           alt="Profile Picture"
                         />
-                        <div className="ml-2">
+                        <div className="ml-4">
                           <h3 className="text-xl font-semibold text-gray-800">
                             {c}
                           </h3>
-                          <p className="text-sm font-medium text-gray-500">
-                            Role: Developer
-                          </p>
                         </div>
                       </div>
                     </div>

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Router, { useRouter } from "next/router";
+import { ResultLoader } from "@/content-loaders/Loader";
 
 const Results = () => {
   const router = useRouter();
@@ -37,8 +38,21 @@ const Results = () => {
 
   return (
     <>
+      {!data && (
+        <>
+          <div className="w-[90%] md:w-[60%] m-auto mt-10  rounded-md p-5 shadow-xl shadow-grey-500">
+            <div className="text-4xl font-bold text-center my-2 ">Results</div>
+            {[1, 2, 3, 4].map((p) => (
+              <ResultLoader
+                key={p}
+                className="w-[100%] md:w-[60%] my-10 border-2 p-2 rounded-md shadow-xl shadow-grey-500"
+              />
+            ))}
+          </div>
+        </>
+      )}
       {data && data.can ? (
-        <div className="w-[60%] m-auto mt-10  rounded-md p-5 shadow-xl shadow-grey-500">
+        <div className="w-[90%] md:w-[60%] m-auto mt-10  rounded-md p-5 shadow-xl shadow-grey-500">
           <div className="text-4xl font-bold text-center my-2 ">Results</div>
 
           {data.can.map((candidate, index) => (
@@ -54,9 +68,10 @@ const Results = () => {
           ))}
         </div>
       ) : (
-        <div className="w-[60%] m-auto mt-10  rounded-md p-5 shadow-xl shadow-grey-500 text-4xl font-bold text-center my-2 ">
-          No Results
-        </div>
+        ""
+        // <div className="w-[60%] m-auto mt-10  rounded-md p-5 shadow-xl shadow-grey-500 text-4xl font-bold text-center my-2 ">
+        //   Loading
+        // </div>
       )}
     </>
   );
