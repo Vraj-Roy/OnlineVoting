@@ -11,6 +11,22 @@ export default function App({ Component, pageProps }) {
   };
   return (
     <>
+      <meta property="og:title" content="Online Voting System" />
+      <meta
+        property="og:description"
+        content="Vote Online Today
+"
+      />
+      <meta
+        property="og:image"
+        content="https://cdn.devdojo.com/images/september2020/macbook-mockup.png"
+      />
+      <meta
+        property="og:url"
+        content="https://online-voting-systemm.vercel.app/"
+      />
+      <meta property="og:type" content="website" />
+      <meta property="og:site_name" content="Online Voting System" />
       <LoadingBar
         color="#3B82F6"
         progress={progress}
