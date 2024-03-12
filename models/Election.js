@@ -6,7 +6,7 @@ const ElectionSchema = mongoose.Schema(
     candidates: { type: Array },
     votes: { type: Array },
     logo: { type: String },
-    voters: { type: Array, unique: true },
+    voters: { type: Array },
   },
   { collection: "elections" }
 );

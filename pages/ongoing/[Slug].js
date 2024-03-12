@@ -46,7 +46,9 @@ const Candidates = () => {
       body: JSON.stringify({ slug: Slug, token, i }),
     });
     let response = await res.json();
-
+    if (response.success) {
+      router.push(`../results/${Slug}`);
+    }
     setLoader(true);
   };
 
@@ -99,7 +101,6 @@ const Candidates = () => {
               <button
                 onClick={() => {
                   onVote(i);
-                  router.push(`../results/${Slug}`);
                 }}
                 type="button"
                 className=" m-auto h-[40px]  w-[100%] mt-4 focus:outline-none text-white bg-blue-600  focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-blue-900    m-auto"

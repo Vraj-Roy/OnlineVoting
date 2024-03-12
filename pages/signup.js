@@ -23,7 +23,7 @@ export default function Signup({ resetKey, setProgress }) {
     }
   };
   const onsubmit = async () => {
-    setProgress(50);
+    setLoading(true);
     if (email == "" || password == "" || username == "") {
       toast.error("Please fill all the fields");
       setProgress(100);
@@ -43,9 +43,11 @@ export default function Signup({ resetKey, setProgress }) {
       localStorage.setItem("token", response.token);
       setProgress(100);
       router.push("/ongoing");
+      setLoading(false);
       resetKey();
     } else {
       setProgress(100);
+      setLoading(false);
       toast.error("user already exist");
     }
   };
@@ -129,7 +131,7 @@ export default function Signup({ resetKey, setProgress }) {
               </button>
 
               <div className="h-10 w-10 m-auto mt-2">
-                {loading && <img src="/loading.gif" />}
+                {loading && <img src="/loading.svg" />}
               </div>
             </div>
           </div>

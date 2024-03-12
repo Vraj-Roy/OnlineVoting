@@ -21,7 +21,7 @@ const getCandidates = async (req, res) => {
       const percentages = await calculatePercentageArray(E.votes); // Await the result of calculatePercentageArray
       res.json({ can: E.candidates, votes: percentages });
     } else {
-      res.son({ message: "Election not found" });
+      res.json({ message: "Election not found" });
     }
   }
 };
