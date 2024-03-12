@@ -19,7 +19,10 @@ export default function App({ Component, pageProps }) {
           content="Vote Online Today
 "
         />
-        <meta property="og:image" content="/main.png" />
+        <meta
+          property="og:image"
+          content="https://online-voting-systemm.vercel.app/main.png"
+        />
         <meta
           property="og:url"
           content="https://online-voting-systemm.vercel.app/"
