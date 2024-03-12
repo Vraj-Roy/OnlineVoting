@@ -40,7 +40,7 @@ export default function Login({ resetKey, setProgress }) {
       resetKey();
       setLoading(false);
       localStorage.setItem("token", response.token);
-      router.push("/");
+      router.push("/ongoing");
     } else {
       setLoading(false);
       toast.error("Wrong Credentials");
