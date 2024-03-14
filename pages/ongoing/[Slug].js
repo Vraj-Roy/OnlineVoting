@@ -13,7 +13,7 @@ const Candidates = () => {
   const { Slug } = router.query;
   useEffect(() => {
     if (!localStorage.getItem("token")) {
-      router.push("./login");
+      router.push("../login");
     } else {
     }
   }, []);
@@ -50,7 +50,7 @@ const Candidates = () => {
       router.push(`../results/${Slug}`);
     } else {
       localStorage.removeItem("token");
-      router.push("/login");
+      router.push("../login");
     }
     setLoader(true);
   };
