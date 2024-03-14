@@ -19,7 +19,6 @@ const Candidates = () => {
   }, []);
 
   const loadCandidates = async () => {
-    setLoader(true);
     const token = localStorage.getItem("token");
     let res = await fetch(`/api/getCandidates`, {
       method: "POST",
@@ -33,8 +32,8 @@ const Candidates = () => {
       router.push(`../results/${Slug}`);
       setLoader(false);
     }
-    setData(response);
     setLoader(false);
+    setData(response);
   };
 
   const onVote = async (i) => {
