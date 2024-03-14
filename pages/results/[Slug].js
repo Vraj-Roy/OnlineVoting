@@ -38,24 +38,16 @@ const Results = () => {
 
   return (
     <>
-      {!data && (
-        <>
-          <div className="w-[90%] md:w-[60%] m-auto mt-10  rounded-md p-5 shadow-xl shadow-grey-500">
-            <div className="text-4xl font-bold text-center my-2 ">Results</div>
-            {[1, 2, 3, 4].map((p) => (
-              <ResultLoader
-                key={p}
-                className="w-[100%] md:w-[60%] my-10 border-2 p-2 rounded-md shadow-xl shadow-grey-500"
-              />
-            ))}
-          </div>
-        </>
-      )}
-      {data && data.can ? (
-        <div className="w-[90%] md:w-[60%] m-auto mt-10  rounded-md p-5 shadow-xl shadow-grey-500">
-          <div className="text-4xl font-bold text-center my-2 ">Results</div>
-
-          {data.can.map((candidate, index) => (
+      {/* {!data && <></>} */}
+      <div className="w-[90%] md:w-[60%] m-auto mt-10  rounded-md p-5 shadow-xl shadow-grey-500">
+        <div className="text-4xl font-bold text-center my-2 ">Results</div>
+        {!data &&
+          [1, 2, 3, 4].map((p) => (
+            <ResultLoader key={p} className="rounded-md  my-3 border-2 p-2 " />
+          ))}
+        {data &&
+          data.can &&
+          data.can.map((candidate, index) => (
             <div className="rounded-md  my-3 border-2 p-2" key={index}>
               <p className="text-lg font-bold">{candidate}</p>
               <p className="text-lg font-bold">{}</p>
@@ -66,13 +58,7 @@ const Results = () => {
               <div>{Math.floor(data.votes[index]) + " %"} </div>
             </div>
           ))}
-        </div>
-      ) : (
-        ""
-        // <div className="w-[60%] m-auto mt-10  rounded-md p-5 shadow-xl shadow-grey-500 text-4xl font-bold text-center my-2 ">
-        //   Loading
-        // </div>
-      )}
+      </div>
     </>
   );
 };
