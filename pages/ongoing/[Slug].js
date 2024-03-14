@@ -50,7 +50,7 @@ const Candidates = () => {
       router.push(`../results/${Slug}`);
     } else {
       localStorage.removeItem("token");
-      router.push(`../results/${Slug}`);
+      router.push("/login");
     }
     setLoader(true);
   };
