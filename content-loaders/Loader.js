@@ -5,7 +5,7 @@ const ResultLoader = (props) => (
     uniqueKey="loader"
     title="Loading Posts..."
     speed={2}
-    viewBox="0 0 1000 85"
+    viewBox="0 0 1000 75"
     backgroundColor="#e6e6e6"
     foregroundColor="#341aff"
     {...props}
@@ -30,9 +30,6 @@ const CandidatesLoader = (props) => (
   >
     <circle cx="70" cy="50" r="50" />
     <rect x="150" y="32" rx="5" ry="5" width="200" height="40" />
-
-    {/*<rect x="0" y="130" rx="0" ry="0" width="1000" height="50" /> 
-    <rect x="60" y="190" rx="5" ry="5" width="70" height="30" /> */}
   </ContentLoader>
 );
 export { ResultLoader, CandidatesLoader };
