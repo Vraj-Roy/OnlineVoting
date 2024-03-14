@@ -48,6 +48,9 @@ const Candidates = () => {
     let response = await res.json();
     if (response.success) {
       router.push(`../results/${Slug}`);
+    } else {
+      localStorage.removeItem("token");
+      router.push(`../results/${Slug}`);
     }
     setLoader(true);
   };
