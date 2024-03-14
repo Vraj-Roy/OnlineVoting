@@ -1,7 +1,9 @@
 import ElectionPost from "@/components/electionPost";
 
 export async function getStaticProps() {
-  const res = await fetch("online-voting-systemm.vercel.app" + "/api/election");
+  const res = await fetch(
+    "https://online-voting-systemm.vercel.app/" + "/api/election"
+  );
   const data = await res.json();
   return { props: { data } };
 }
