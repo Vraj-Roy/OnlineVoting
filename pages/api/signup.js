@@ -6,13 +6,14 @@ const jwt = require("jsonwebtoken");
 const Signup = async (req, res) => {
   if (req.method == "POST") {
     await connectDb();
-    var salt = bcrypt.genSaltSync(10);
-    var hash = bcrypt.hashSync(req.body.password, salt);
 
     let Unq = await User.find({
       $or: [{ username: req.body.username }, { email: req.body.email }],
     });
+
     if (Unq.length === 0) {
+      var salt = bcrypt.genSaltSync(10);
+      var hash = bcrypt.hashSync(req.body.password, salt);
       let U = new User({
         username: req.body.username,
         email: req.body.email,

@@ -72,7 +72,7 @@ const Navbar = ({ resetKey, setProgress }) => {
                   }}
                   // className="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 bluetext-white md:bluehover:text-blue-500 bluehover:bg-gray-700 bluehover:text-white md:bluehover:bg-transparent"
                   className={
-                    "   block py-2 px-3 md:p-0 cursor-pointer  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 bluetext-white md:bluehover:text-blue-500 bluehover:bg-gray-700 bluehover:text-white md:bluehover:bg-transparen " +
+                    "  select-none block py-2 px-3 md:p-0 cursor-pointer  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 bluetext-white md:bluehover:text-blue-500 bluehover:bg-gray-700 bluehover:text-white md:bluehover:bg-transparen " +
                     (router.pathname == "/"
                       ? " text-blue-700"
                       : "text-grey-900")
@@ -88,7 +88,7 @@ const Navbar = ({ resetKey, setProgress }) => {
                   }}
                   // className="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 bluetext-white md:bluehover:text-blue-500 bluehover:bg-gray-700 bluehover:text-white md:bluehover:bg-transparent"
                   className={
-                    "   block py-2 px-3 md:p-0 cursor-pointer   rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 bluetext-white md:bluehover:text-blue-500 bluehover:bg-gray-700 bluehover:text-white md:bluehover:bg-transparen " +
+                    " select-none   block py-2 px-3 md:p-0 cursor-pointer   rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 bluetext-white md:bluehover:text-blue-500 bluehover:bg-gray-700 bluehover:text-white md:bluehover:bg-transparen " +
                     (router.pathname == "/aboutus"
                       ? "  text-blue-700"
                       : " text-grreen-900")
