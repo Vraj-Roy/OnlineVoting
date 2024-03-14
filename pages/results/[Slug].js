@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Router, { useRouter } from "next/router";
+import { useRouter } from "next/router";
 import { ResultLoader } from "@/content-loaders/Loader";
 
 const Results = () => {

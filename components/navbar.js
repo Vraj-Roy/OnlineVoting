@@ -19,7 +19,7 @@ const Navbar = ({ resetKey, setProgress }) => {
   };
   return (
     <>
-      <nav className="border-gray-200 bg-gray-50 bluebg-gray-100 blueborder-gray-700 shadow-md">
+      <nav className="border-gray-200 bg-gray-50   blueborder-gray-700 shadow-md w-[100%] sticky top-0 z-[50]">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <Link
             href="/"
