@@ -19,6 +19,9 @@ const Candidates = () => {
   }, []);
 
   const loadCandidates = async () => {
+    if (!Slug) {
+      return;
+    }
     const token = localStorage.getItem("token");
     let res = await fetch(`/api/getCandidates`, {
       method: "POST",
