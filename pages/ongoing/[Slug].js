@@ -4,7 +4,7 @@ import Router, { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { CandidatesLoader } from "./../../content-loaders/Loader";
 const Candidates = () => {
-  const [data, setData] = useState();
+  const [data, setData] = useState(false);
   // const [token, setToken] = useState("");
   const [loader, setLoader] = useState(true);
   const router = useRouter();
@@ -100,7 +100,7 @@ const Candidates = () => {
                   </>
                 );
               })}
-            {loader &&
+            {!data &&
               [1, 2, 3, 4].map((e) => {
                 return (
                   <CandidatesLoader
