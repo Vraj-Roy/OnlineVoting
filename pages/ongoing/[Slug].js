@@ -33,6 +33,7 @@ const Candidates = () => {
       setLoader(false);
     }
     setLoader(false);
+    console.log(response);
     setData(response);
   };
 
