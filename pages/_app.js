@@ -3,6 +3,7 @@ import "@/styles/globals.css";
 import Head from "next/head";
 import { useState } from "react";
 import LoadingBar from "react-top-loading-bar";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function App({ Component, pageProps }) {
   const [progress, setProgress] = useState(100);
@@ -42,6 +43,7 @@ export default function App({ Component, pageProps }) {
       />
       <Navbar resetKey={resetKey} key={key} setProgress={setProgress} />
       <Component {...pageProps} resetKey={resetKey} setProgress={setProgress} />
+      <Analytics />
     </>
   );
 }

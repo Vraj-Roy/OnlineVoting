@@ -2,11 +2,11 @@ import Navbar from "@/components/navbar";
 import VotePost from "@/components/votePost";
 import Router, { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-
+import { CandidatesLoader } from "./../../content-loaders/Loader";
 const Candidates = () => {
   const [data, setData] = useState();
   // const [token, setToken] = useState("");
-  const [loader, setLoader] = useState(false);
+  const [loader, setLoader] = useState(true);
   const router = useRouter();
   let [i, setI] = useState(-1);
 
@@ -19,6 +19,7 @@ const Candidates = () => {
   }, []);
 
   const loadCandidates = async () => {
+    setLoader(true);
     const token = localStorage.getItem("token");
     let res = await fetch(`/api/getCandidates`, {
       method: "POST",
@@ -30,10 +31,10 @@ const Candidates = () => {
     let response = await res.json();
     if (response.unique == false) {
       router.push(`../results/${Slug}`);
+      setLoader(false);
     }
     setData(response);
-    console.log(response);
-    setLoader(true);
+    setLoader(false);
   };
 
   const onVote = async (i) => {
@@ -52,7 +53,7 @@ const Candidates = () => {
       localStorage.removeItem("token");
       router.push("../login");
     }
-    setLoader(true);
+    setLoader(false);
   };
 
   useEffect(() => {
@@ -98,6 +99,15 @@ const Candidates = () => {
                       </div>
                     </div>
                   </>
+                );
+              })}
+            {loader &&
+              [1, 2, 3, 4].map((e) => {
+                return (
+                  <CandidatesLoader
+                    key={e}
+                    className="my-2 border-2 p-2 rounded-xl "
+                  />
                 );
               })}
             {i !== -1 ? (
