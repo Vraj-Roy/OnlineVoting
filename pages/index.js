@@ -25,7 +25,7 @@ export default function Home() {
         />
         <meta
           property="og:image"
-          content="https://cdn.devdojo.com/images/september2020/macbook-mockup.png"
+          content="https://online-voting-systemm.vercel.app/main.png"
         />
         <meta
           property="og:url"
@@ -188,7 +188,7 @@ export default function Home() {
             <div className="relative z-30 flex flex-col items-end justify-center w-full h-full lg:w-1/2 ms:pl-10">
               <div className="container relative left-0 w-full max-w-4xl lg:absolute xl:max-w-6xl lg:w-screen">
                 <img
-                  src="https://cdn.devdojo.com/images/september2020/macbook-mockup.png"
+                  src="/main.png"
                   className="w-full h-auto mt-20 mb-20 ml-0 lg:mt-24 xl:mt-40 lg:mb-0 lg:h-full lg:-ml-12"
                 />
               </div>

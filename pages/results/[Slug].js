@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { ResultLoader } from "@/content-loaders/Loader";
+import ResultPost from "@/components/resultPost";
 
 const Results = () => {
   const router = useRouter();
@@ -53,17 +54,14 @@ const Results = () => {
           {data &&
             data.can &&
             data.can.map((candidate, index) => (
-              <div className="rounded-md  my-3 border-2 p-2" key={index}>
-                <p className="text-lg font-bold">{candidate}</p>
-                <p className="text-lg font-bold">{}</p>
-                <div
-                  className={`bg-blue-500 h-4 rounded-full `}
-                  style={{ width: Math.floor(data.votes[index]) + "%" }}
-                ></div>
-                <div>{Math.floor(data.votes[index]) + " %"} </div>
-              </div>
+              <ResultPost
+                key={index}
+                candidate={candidate}
+                width={Math.floor(data.votes[index]) + "%"}
+              />
             ))}
         </div>
+        x
       </div>
     </>
   );

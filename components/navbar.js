@@ -84,6 +84,22 @@ const Navbar = ({ resetKey, setProgress }) => {
               <li>
                 <div
                   onClick={() => {
+                    setProgress(100), router.push("/ongoing");
+                  }}
+                  // className="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 bluetext-white md:bluehover:text-blue-500 bluehover:bg-gray-700 bluehover:text-white md:bluehover:bg-transparent"
+                  className={
+                    "  select-none block py-2 px-3 md:p-0 cursor-pointer  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 bluetext-white md:bluehover:text-blue-500 bluehover:bg-gray-700 bluehover:text-white md:bluehover:bg-transparen " +
+                    (router.pathname == "/ongoing"
+                      ? " text-blue-700"
+                      : "text-grey-900")
+                  }
+                >
+                  Live Elections
+                </div>
+              </li>
+              <li>
+                <div
+                  onClick={() => {
                     setProgress(100), router.push("/aboutus");
                   }}
                   // className="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 bluetext-white md:bluehover:text-blue-500 bluehover:bg-gray-700 bluehover:text-white md:bluehover:bg-transparent"
@@ -145,7 +161,7 @@ const Navbar = ({ resetKey, setProgress }) => {
           </div>
         </div>
         <div
-          className={`h-${navHeight} overflow-hidden w-full justify-between px-5 ${
+          className={` transition duration-300 flex flex-wrap overflow-hidden w-full justify-around px-5 ${
             navHeight > 0 ? "flex" : "hidden"
           }`}
         >
@@ -160,6 +176,21 @@ const Navbar = ({ resetKey, setProgress }) => {
             }
           >
             Home
+          </div>
+
+          <div
+            onClick={() => {
+              setProgress(100), router.push("/ongoing");
+            }}
+            // className="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 bluetext-white md:bluehover:text-blue-500 bluehover:bg-gray-700 bluehover:text-white md:bluehover:bg-transparent"
+            className={
+              "  select-none block py-2 px-3 md:p-0 cursor-pointer  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 bluetext-white md:bluehover:text-blue-500 bluehover:bg-gray-700 bluehover:text-white md:bluehover:bg-transparen " +
+              (router.pathname == "/ongoing"
+                ? " text-blue-700"
+                : "text-grey-900")
+            }
+          >
+            Live Elections
           </div>
           <div
             onClick={() => {

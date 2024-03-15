@@ -35,11 +35,11 @@ export default function App({ Component, pageProps }) {
       <LoadingBar
         color="#3B82F6"
         progress={progress}
-        height={4}
+        height={5}
         transitionTime={400}
-        loaderSpeed={300}
+        loaderSpeed={400}
         shadow={true}
-        waitingTime={400}
+        waitingTime={500}
         onLoaderFinished={() => setProgress(0)}
       />
       <Navbar resetKey={resetKey} key={key} setProgress={setProgress} />
