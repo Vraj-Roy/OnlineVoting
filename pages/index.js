@@ -187,8 +187,11 @@ export default function Home() {
             </div>
             <div className="relative z-30 flex flex-col items-end justify-center w-full h-full lg:w-1/2 ms:pl-10">
               <div className="container relative left-0 w-full max-w-4xl lg:absolute xl:max-w-6xl lg:w-screen">
-                <img
+                <Image
                   src="/main.png"
+                  width={1000}
+                  height={1000}
+                  alt="Main"
                   className="w-full h-auto mt-20 mb-20 ml-0 lg:mt-24 xl:mt-40 lg:mb-0 lg:h-full lg:-ml-12"
                 />
               </div>
@@ -613,7 +616,9 @@ export default function Home() {
                       </h3>
                       <p className="mt-1 text-sm leading-5 text-gray-500 truncate" />
                     </div>
-                    <img
+                    <Image
+                      width={100}
+                      height={100}
                       className="flex-shrink-0 object-cover w-24 h-24 mb-5 bg-gray-300 rounded-full md:mb-0"
                       src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2694&q=80"
                       alt=""
@@ -641,7 +646,9 @@ export default function Home() {
                       </h3>
                       <p className="mt-1 text-sm leading-5 text-gray-500 truncate" />
                     </div>
-                    <img
+                    <Image
+                      width={100}
+                      height={100}
                       className="flex-shrink-0 object-cover w-24 h-24 mb-5 bg-gray-300 rounded-full md:mb-0"
                       src="https://images.unsplash.com/photo-1546820389-44d77e1f3b31?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80"
                       alt=""
@@ -671,7 +678,9 @@ export default function Home() {
                       </h3>
                       <p className="mt-1 text-sm leading-5 text-gray-500 truncate" />
                     </div>
-                    <img
+                    <Image
+                      width={100}
+                      height={100}
                       className="flex-shrink-0 object-cover w-24 h-24 mb-5 bg-gray-300 rounded-full md:mb-0"
                       src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1700&q=80"
                       alt=""
@@ -699,7 +708,9 @@ export default function Home() {
                       </h3>
                       <p className="mt-1 text-sm leading-5 text-gray-500 truncate" />
                     </div>
-                    <img
+                    <Image
+                      width={100}
+                      height={100}
                       className="flex-shrink-0 object-cover w-24 h-24 mb-5 bg-gray-300 rounded-full md:mb-0"
                       src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2700&q=80"
                       alt=""
