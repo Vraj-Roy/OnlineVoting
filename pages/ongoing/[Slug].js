@@ -91,7 +91,7 @@ const Candidates = () => {
                       <div className="flex items-center">
                         <img
                           className="h-12 w-12 rounded-full object-cover"
-                          src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                          src="/default-pic.jpg"
                           alt="Profile Picture"
                         />
                         <div className="ml-4">

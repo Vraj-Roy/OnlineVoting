@@ -620,7 +620,7 @@ export default function Home() {
                       width={100}
                       height={100}
                       className="flex-shrink-0 object-cover w-24 h-24 mb-5 bg-gray-300 rounded-full md:mb-0"
-                      src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2694&q=80"
+                      src="/yash.jpg"
                       alt=""
                     />
                   </blockquote>
@@ -650,7 +650,7 @@ export default function Home() {
                       width={100}
                       height={100}
                       className="flex-shrink-0 object-cover w-24 h-24 mb-5 bg-gray-300 rounded-full md:mb-0"
-                      src="https://images.unsplash.com/photo-1546820389-44d77e1f3b31?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80"
+                      src="/prabhu.jpg"
                       alt=""
                     />
                   </blockquote>
@@ -682,7 +682,7 @@ export default function Home() {
                       width={100}
                       height={100}
                       className="flex-shrink-0 object-cover w-24 h-24 mb-5 bg-gray-300 rounded-full md:mb-0"
-                      src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1700&q=80"
+                      src="/pavan.jpg"
                       alt=""
                     />
                   </blockquote>
@@ -712,7 +712,7 @@ export default function Home() {
                       width={100}
                       height={100}
                       className="flex-shrink-0 object-cover w-24 h-24 mb-5 bg-gray-300 rounded-full md:mb-0"
-                      src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2700&q=80"
+                      src="/tommy.jpg"
                       alt=""
                     />
                   </blockquote>
