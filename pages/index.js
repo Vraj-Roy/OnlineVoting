@@ -805,35 +805,6 @@ export default function Home() {
                   </a>
                 </li>
               </ul>
-              <ul className="flex flex-col w-full p-0 font-medium text-left text-gray-700 list-none">
-                <li className="inline-block px-3 py-2 mt-5 font-bold tracking-wide text-gray-800 uppercase md:mt-0">
-                  TailwindCSS
-                </li>
-                <li>
-                  <a
-                    href="https://devdojo.com/tailwindcss/components"
-                    className="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600"
-                  >
-                    Tailwind Components
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://devdojo.com/tailwindcss/templates"
-                    className="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600"
-                  >
-                    Tailwind Templates
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://devdojo.com/tails"
-                    className="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600"
-                  >
-                    Tails
-                  </a>
-                </li>
-              </ul>
               <div className="flex flex-col w-full text-gray-700">
                 <div className="inline-block px-3 py-2 mt-5 font-bold text-gray-800 uppercase md:mt-0">
                   Follow Us
@@ -886,10 +857,10 @@ export default function Home() {
             </div>
           </div>
           <div className="pt-4 pt-6 mt-10 text-center text-gray-500 border-t border-gray-100">
-            © 2020 Landmark. All rights reserved.
+            © 2024 Online Voting. All rights reserved.
           </div>
           <div className="pt-2 pt-4 mt-2 text-center text-gray-600 border-t border-gray-100">
-            Distributed By <a href="https://themewagon.com/">Themewagon</a>
+            Distributed By IT Group3
           </div>
         </footer>
         {/* a little JS for the mobile nav button */}
