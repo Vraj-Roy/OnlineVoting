@@ -21,6 +21,13 @@ export default function Login({ resetKey, setProgress }) {
   };
 
   const onsubmit = async (e) => {
+    if (password == "" || username == "") {
+      toast.error("Please fill all the fields");
+      setProgress(100);
+      setLoading(false);
+      return;
+    }
+
     // console.log(process.env.URL_PATH)
     e.preventDefault();
     setLoading(true);

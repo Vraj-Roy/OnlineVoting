@@ -29,6 +29,7 @@
     "react-dom": "18.2.0",
     "react-toastify": "^10.0.4",
     "react-top-loading-bar": "^2.3.1",
-    "tailwindcss": "3.4.1"
+    "tailwindcss": "3.4.1",
+    "validator": "^13.11.0"
   }
 }

@@ -2,10 +2,13 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import validator from "validator";
+
 // require("dotenv").config({ path: "../" });
 
 export default function Signup({ resetKey, setProgress }) {
   const router = useRouter();
+
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -27,6 +30,12 @@ export default function Signup({ resetKey, setProgress }) {
     if (email == "" || password == "" || username == "") {
       toast.error("Please fill all the fields");
       setProgress(100);
+      setLoading(false);
+      return;
+    }
+    if (!validator.isEmail(email)) {
+      toast.error("Please Enter a valid email address");
+      setLoading(false);
       return;
     }
     let userData = { username, email, password };
